@@ -1,0 +1,117 @@
+.hover-effect {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-5px);
+  }
+  
+  .spinner-border {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .empty-courses-container {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #f6f9fc 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stacked-text {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .primary-text {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    background: linear-gradient(45deg, #2196f3, #1976d2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .shadow-text {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .hover-effect {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+  }
+  
+  /* Animation for the empty state */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .empty-courses-container {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .stacked-text {
+      height: auto;
+      margin: 1rem 0;
+    }
+    
+    .primary-text, .shadow-text {
+      font-size: 1.2rem;
+    }
+  }
+
+  .nav-link.position-relative .badge {
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    padding: 0.25em 0.6em;
+  }
+  
+  .navbar-user-name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-user-name {
+      max-width: 100px;
+    }
+  }
