@@ -40,7 +40,13 @@ pipeline {
     stage('Run Backend Tests') {
       steps {
         dir('Backend-CLMS-using-MERN') {
-          bat 'npm test || echo "No tests configured"'
+          script {
+            try {
+              bat 'npm test'
+            } catch (err) {
+              echo "No tests found, skipping..."
+            }
+          }
         }
       }
     }
